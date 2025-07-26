@@ -1,0 +1,22 @@
+CREATE TABLE event_registrations (
+    id SERIAL PRIMARY KEY,
+    event_id INTEGER NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    age INTEGER,
+    dietary_restrictions TEXT,
+    emergency_contact_name VARCHAR(100),
+    emergency_contact_phone VARCHAR(20),
+    special_requests TEXT,
+    payment_status VARCHAR(20) DEFAULT 'pending',
+    payment_method VARCHAR(20),
+    payment_amount DECIMAL(10,2),
+    stripe_payment_intent_id TEXT,
+    registered_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    confirmed_at TIMESTAMP WITH TIME ZONE,
+    cancelled_at TIMESTAMP WITH TIME ZONE,
+    cancellation_reason TEXT,
+    preferred_language VARCHAR(5) DEFAULT 'cs'
+);

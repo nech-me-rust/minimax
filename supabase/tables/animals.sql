@@ -1,0 +1,22 @@
+CREATE TABLE animals (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    species TEXT NOT NULL,
+    breed TEXT,
+    age_years INTEGER,
+    gender VARCHAR(10),
+    arrival_date DATE,
+    story_cs TEXT,
+    story_en TEXT,
+    personality_cs TEXT,
+    personality_en TEXT,
+    special_needs_cs TEXT,
+    special_needs_en TEXT,
+    is_adoptable BOOLEAN DEFAULT false,
+    is_featured BOOLEAN DEFAULT false,
+    status VARCHAR(20) DEFAULT 'sanctuary',
+    image_url TEXT,
+    gallery_images JSONB,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);

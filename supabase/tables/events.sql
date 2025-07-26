@@ -1,0 +1,20 @@
+CREATE TABLE events (
+    id SERIAL PRIMARY KEY,
+    title_cs TEXT NOT NULL,
+    title_en TEXT NOT NULL,
+    description_cs TEXT,
+    description_en TEXT,
+    start_date TIMESTAMP WITH TIME ZONE NOT NULL,
+    end_date TIMESTAMP WITH TIME ZONE,
+    location TEXT,
+    max_participants INTEGER,
+    current_participants INTEGER DEFAULT 0,
+    registration_required BOOLEAN DEFAULT false,
+    registration_deadline TIMESTAMP WITH TIME ZONE,
+    price DECIMAL(10,2) DEFAULT 0,
+    event_type VARCHAR(50) DEFAULT 'workshop',
+    status VARCHAR(20) DEFAULT 'active',
+    image_url TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
