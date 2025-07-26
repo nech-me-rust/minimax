@@ -11,9 +11,9 @@
     "preview": "yes | pnpm install && vite preview"
   },
   {
-  ...
+  
   "homepage": "https://nech-me-rust.github.io/minimax/",
-  ...
+  
 }
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
