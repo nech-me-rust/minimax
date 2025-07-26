@@ -10,6 +10,11 @@
     "lint": "yes | pnpm install && eslint .",
     "preview": "yes | pnpm install && vite preview"
   },
+  {
+  ...
+  "homepage": "https://nech-me-rust.github.io/minimax/",
+  ...
+}
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.2",
